@@ -9,4 +9,4 @@ const Heading = ({ count, countHandler, name }) => {
   );
 };
 
-export default WithCountHOD(Heading);
+export default WithCountHOD(Heading, 3);

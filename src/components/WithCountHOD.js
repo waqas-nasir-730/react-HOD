@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-const WithCountHOD = (WrappedComponent) => {
+const WithCountHOD = (WrappedComponent, incrementBy = 1) => {
   class WithCountHOD extends Component {
     constructor(props) {
       super(props);
@@ -12,12 +12,11 @@ const WithCountHOD = (WrappedComponent) => {
 
     countHandler = () => {
       this.setState((prevState) => {
-        return { count: prevState.count + 1 };
+        return { count: prevState.count + incrementBy };
       });
     };
 
     render() {
-      console.log(this.props);
       return (
         <WrappedComponent
           count={this.state.count}

@@ -9,4 +9,4 @@ const Button = ({ count, countHandler, name }) => {
   );
 };
 
-export default WithCountHOD(Button);
+export default WithCountHOD(Button, 5);
